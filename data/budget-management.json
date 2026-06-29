@@ -1,0 +1,51 @@
+{
+  "summary": {
+    "energyBudget": 85000,
+    "energyUsed": 42580,
+    "energyUsageRate": 50.1,
+    "carbonBudget": 185000,
+    "carbonEmitted": 89200,
+    "carbonUsageRate": 48.2,
+    "energyYearTarget": 168000,
+    "carbonYearTarget": 365000,
+    "energyChange": 3.2,
+    "carbonChange": -1.5,
+    "alertCount": 3
+  },
+  "monthlyExecution": [
+    { "month": "1月", "energyBudget": 14000, "energyActual": 13200, "carbonBudget": 30500, "carbonActual": 28500 },
+    { "month": "2月", "energyBudget": 12000, "energyActual": 11800, "carbonBudget": 26000, "carbonActual": 25100 },
+    { "month": "3月", "energyBudget": 14500, "energyActual": 13900, "carbonBudget": 31500, "carbonActual": 30100 },
+    { "month": "4月", "energyBudget": 14000, "energyActual": 14200, "carbonBudget": 30500, "carbonActual": 30600 },
+    { "month": "5月", "energyBudget": 15000, "energyActual": 14800, "carbonBudget": 32500, "carbonActual": 31800 },
+    { "month": "6月", "energyBudget": 15500, "energyActual": 15900, "carbonBudget": 34000, "carbonActual": 33500 },
+    { "month": "7月", "energyBudget": 16000, "energyActual": 0, "carbonBudget": 35000, "carbonActual": 0 },
+    { "month": "8月", "energyBudget": 16000, "energyActual": 0, "carbonBudget": 35000, "carbonActual": 0 },
+    { "month": "9月", "energyBudget": 15000, "energyActual": 0, "carbonBudget": 32500, "carbonActual": 0 },
+    { "month": "10月", "energyBudget": 14000, "energyActual": 0, "carbonBudget": 30500, "carbonActual": 0 },
+    { "month": "11月", "energyBudget": 13000, "energyActual": 0, "carbonBudget": 28000, "carbonActual": 0 },
+    { "month": "12月", "energyBudget": 13000, "energyActual": 0, "carbonBudget": 28000, "carbonActual": 0 }
+  ],
+  "alerts": [
+    { "id": 1, "type": "warning", "title": "用电预算执行进度已达52%", "description": "当前用电量已超过时间进度2个百分点，预计年末可能超预算", "time": "2026-06-24", "status": "未处理" },
+    { "id": 2, "type": "danger", "title": "碳排放预算进度预警", "description": "碳排放累计量48.2%已接近时间进度50%，需关注下半年用能需求", "time": "2026-06-20", "status": "处理中" },
+    { "id": 3, "type": "info", "title": "天然气用量较去年同期增长5.8%", "description": "天然气累计消耗量12,600 tce，建议检查用气设备运行效率", "time": "2026-06-15", "status": "未处理" },
+    { "id": 4, "type": "success", "title": "可再生能源占比达标", "description": "可再生能源使用占比8.5%，已达到年度目标8%的要求", "time": "2026-06-10", "status": "已处理" },
+    { "id": 5, "type": "warning", "title": "蒸汽消耗量超月度预算8%", "description": "6月蒸汽消耗量较预算超出8%，建议排查管网泄漏", "time": "2026-06-08", "status": "未处理" }
+  ],
+  "forecast": [
+    { "month": "7月", "energyForecast": 15500, "energyBudget": 16000, "carbonForecast": 33200, "carbonBudget": 35000 },
+    { "month": "8月", "energyForecast": 15800, "energyBudget": 16000, "carbonBudget": 35000, "carbonForecast": 33800 },
+    { "month": "9月", "energyForecast": 14800, "energyBudget": 15000, "carbonBudget": 32500, "carbonForecast": 31800 },
+    { "month": "10月", "energyForecast": 13800, "energyBudget": 14000, "carbonBudget": 30500, "carbonForecast": 29800 },
+    { "month": "11月", "energyForecast": 12800, "energyBudget": 13000, "carbonBudget": 28000, "carbonForecast": 27600 },
+    { "month": "12月", "energyForecast": 12500, "energyBudget": 13000, "carbonBudget": 28000, "carbonForecast": 27000 }
+  ],
+  "categoryBreakdown": [
+    { "name": "煤炭", "budget": 28000, "used": 13200, "unit": "tce" },
+    { "name": "电力", "budget": 32000, "used": 16800, "unit": "tce" },
+    { "name": "天然气", "budget": 18000, "used": 9600, "unit": "tce" },
+    { "name": "柴油", "budget": 5000, "used": 2100, "unit": "tce" },
+    { "name": "其他", "budget": 2000, "used": 880, "unit": "tce" }
+  ]
+}

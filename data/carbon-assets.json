@@ -1,0 +1,38 @@
+{
+  "summary": {
+    "totalAssets": 185000,
+    "totalAssetsUnit": "tCO₂e",
+    "quotaAllocated": 175000,
+    "actualEmission": 89200,
+    "surplus": 85800,
+    "ccerHoldings": 12500,
+    "greenCertCount": 8500,
+    "carbonPrice": 92.5,
+    "priceChange": 3.8,
+    "complianceDeadline": "2026-11-30",
+    "complianceProgress": 62
+  },
+  "assetItems": [
+    { "id": 1, "type": "碳配额", "name": "SHEA-2026 碳排放配额", "amount": 175000, "unit": "tCO₂e", "source": "政府分配", "status": "持有", "expiryDate": "2026-12-31", "cost": 0, "currentValue": 16187500 },
+    { "id": 2, "type": "CCER", "name": "甘肃光伏项目CCER", "amount": 8000, "unit": "tCO₂e", "source": "自愿减排市场", "status": "持有", "expiryDate": "2027-06-30", "cost": 65, "currentValue": 740000 },
+    { "id": 3, "type": "CCER", "name": "四川林业碳汇CCER", "amount": 4500, "unit": "tCO₂e", "source": "自愿减排市场", "status": "持有", "expiryDate": "2028-03-15", "cost": 58, "currentValue": 416250 },
+    { "id": 4, "type": "绿证", "name": "风电绿证GEC-2026", "amount": 5000, "unit": "MWh", "source": "绿证交易平台", "status": "持有", "expiryDate": "2027-06-30", "cost": 45, "currentValue": 225000 },
+    { "id": 5, "type": "绿证", "name": "光伏绿证GEC-2026", "amount": 3500, "unit": "MWh", "source": "绿证交易平台", "status": "持有", "expiryDate": "2027-06-30", "cost": 48, "currentValue": 168000 },
+    { "id": 6, "type": "碳配额", "name": "SHEA-2025 剩余配额", "amount": 8200, "unit": "tCO₂e", "source": "年度结转", "status": "持有", "expiryDate": "2026-12-31", "cost": 0, "currentValue": 758500 }
+  ],
+  "monthlyPrice": [
+    { "month": "1月", "price": 78.5, "volume": 15800 },
+    { "month": "2月", "price": 80.2, "volume": 12200 },
+    { "month": "3月", "price": 82.0, "volume": 18500 },
+    { "month": "4月", "price": 85.6, "volume": 16200 },
+    { "month": "5月", "price": 88.3, "volume": 19800 },
+    { "month": "6月", "price": 92.5, "volume": 21500 }
+  ],
+  "complianceMilestones": [
+    { "name": "配额分配", "targetDate": "2026-04-30", "actualDate": "2026-04-25", "status": "已完成" },
+    { "name": "排放数据上报", "targetDate": "2026-07-31", "actualDate": null, "status": "进行中" },
+    { "name": "第三方核查", "targetDate": "2026-09-30", "actualDate": null, "status": "待开始" },
+    { "name": "配额清缴", "targetDate": "2026-11-30", "actualDate": null, "status": "待开始" },
+    { "name": "盈余交易", "targetDate": "2026-12-15", "actualDate": null, "status": "待开始" }
+  ]
+}

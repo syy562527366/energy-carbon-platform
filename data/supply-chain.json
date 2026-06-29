@@ -1,0 +1,42 @@
+{
+  "summary": {
+    "totalSuppliers": 28,
+    "tier1Count": 12,
+    "tier2Count": 16,
+    "dataCollected": 22,
+    "dataCollectedRate": 78.6,
+    "avgCarbonScore": 72.5,
+    "highRiskCount": 3,
+    "totalSupplyChainEmission": 45200
+  },
+  "suppliers": [
+    { "id": 1, "name": "源丰矿业有限公司", "tier": "一级", "category": "原材料", "product": "铁矿石", "annualEmission": 8500, "carbonScore": 78, "dataStatus": "已提交", "riskLevel": "低", "lastReport": "2026-06" },
+    { "id": 2, "name": "华强焦化厂", "tier": "一级", "category": "燃料", "product": "焦炭", "annualEmission": 6200, "carbonScore": 65, "dataStatus": "已提交", "riskLevel": "中", "lastReport": "2026-05" },
+    { "id": 3, "name": "长丰物流集团", "tier": "一级", "category": "物流", "product": "运输服务", "annualEmission": 3800, "carbonScore": 82, "dataStatus": "已提交", "riskLevel": "低", "lastReport": "2026-06" },
+    { "id": 4, "name": "金源合金材料有限公司", "tier": "一级", "category": "原材料", "product": "铁合金", "annualEmission": 7200, "carbonScore": 58, "dataStatus": "待提交", "riskLevel": "高", "lastReport": "2026-03" },
+    { "id": 5, "name": "宏达耐火材料厂", "tier": "一级", "category": "辅料", "product": "耐火材料", "annualEmission": 1200, "carbonScore": 75, "dataStatus": "已提交", "riskLevel": "低", "lastReport": "2026-06" },
+    { "id": 6, "name": "南方电力集团", "tier": "一级", "category": "能源", "product": "电力", "annualEmission": 10500, "carbonScore": 71, "dataStatus": "已提交", "riskLevel": "中", "lastReport": "2026-06" },
+    { "id": 7, "name": "天元石灰石矿", "tier": "二级", "category": "原材料", "product": "石灰石", "annualEmission": 2400, "carbonScore": 68, "dataStatus": "待提交", "riskLevel": "中", "lastReport": "2026-04" },
+    { "id": 8, "name": "鼎盛包装材料公司", "tier": "二级", "category": "包装", "product": "包装材料", "annualEmission": 600, "carbonScore": 85, "dataStatus": "已提交", "riskLevel": "低", "lastReport": "2026-06" },
+    { "id": 9, "name": "振华机械设备公司", "tier": "二级", "category": "设备", "product": "备品备件", "annualEmission": 2800, "carbonScore": 62, "dataStatus": "未提交", "riskLevel": "高", "lastReport": null },
+    { "id": 10, "name": "绿源再生资源公司", "tier": "二级", "category": "再生资源", "product": "废钢", "annualEmission": 800, "carbonScore": 90, "dataStatus": "已提交", "riskLevel": "低", "lastReport": "2026-06" },
+    { "id": 11, "name": "中远海运集团", "tier": "一级", "category": "物流", "product": "海运服务", "annualEmission": 4500, "carbonScore": 73, "dataStatus": "已提交", "riskLevel": "中", "lastReport": "2026-05" },
+    { "id": 12, "name": "瑞鑫化工有限公司", "tier": "二级", "category": "辅料", "product": "化工辅料", "annualEmission": 900, "carbonScore": 55, "dataStatus": "未提交", "riskLevel": "高", "lastReport": null }
+  ],
+  "emissionByCategory": [
+    { "name": "原材料", "value": 18100, "ratio": 40.0, "color": "#64748B" },
+    { "name": "能源", "value": 10500, "ratio": 23.2, "color": "#F97316" },
+    { "name": "物流运输", "value": 8300, "ratio": 18.4, "color": "#3B82F6" },
+    { "name": "辅料", "value": 2100, "ratio": 4.6, "color": "#10B981" },
+    { "name": "设备与备件", "value": 2800, "ratio": 6.2, "color": "#8B5CF6" },
+    { "name": "其他", "value": 3400, "ratio": 7.5, "color": "#94A3B8" }
+  ],
+  "monthlyCollectionRate": [
+    { "month": "1月", rate: 65 },
+    { "month": "2月", rate: 70 },
+    { "month": "3月", rate: 68 },
+    { "month": "4月", rate: 72 },
+    { "month": "5月", rate: 75 },
+    { "month": "6月", rate: 79 }
+  ]
+}

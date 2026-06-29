@@ -1,0 +1,37 @@
+{
+  "summary": {
+    "scope1Total": 28500,
+    "scope2Total": 60700,
+    "totalEmission": 89200,
+    "intensity": 0.76,
+    "intensityUnit": "tCO₂/万元",
+    "trend": -2.3,
+    "scope1Change": 1.5,
+    "scope2Change": -3.8,
+    "verifiedStatus": "待核查"
+  },
+  "emissionSources": [
+    { "id": 1, "source": "锅炉燃煤", "category": "燃料燃烧", "scope": "范围一", "activity": 4400, "unit": "tce", "factor": 2.64, "emission": 11616, "ratio": 13.0, "dataSource": "仪表采集" },
+    { "id": 2, "source": "天然气锅炉", "category": "燃料燃烧", "scope": "范围一", "activity": 2520, "unit": "tce", "factor": 1.96, "emission": 4939, "ratio": 5.5, "dataSource": "仪表采集" },
+    { "id": 3, "source": "柴油发电机", "category": "燃料燃烧", "scope": "范围一", "activity": 680, "unit": "tce", "factor": 2.14, "emission": 1455, "ratio": 1.6, "dataSource": "手工录入" },
+    { "id": 4, "source": "生产工艺排放", "category": "工艺过程", "scope": "范围一", "activity": 8200, "unit": "t", "factor": 1.28, "emission": 10490, "ratio": 11.8, "dataSource": "MES系统" },
+    { "id": 5, "source": "外购电力", "category": "外购电力", "scope": "范围二", "activity": 3380, "unit": "万kWh", "factor": 0.5942, "emission": 20084, "ratio": 22.5, "dataSource": "电网账单" },
+    { "id": 6, "source": "外购蒸汽", "category": "外购热力", "scope": "范围二", "activity": 420, "unit": "tce", "factor": 2.48, "emission": 1042, "ratio": 1.2, "dataSource": "热力公司结算单" },
+    { "id": 7, "source": "焦炭消耗", "category": "燃料燃烧", "scope": "范围一", "activity": 350, "unit": "tce", "factor": 2.89, "emission": 1012, "ratio": 1.1, "dataSource": "仪表采集" },
+    { "id": 8, "source": "自备电厂发电", "category": "燃料燃烧", "scope": "范围一", "activity": 2190, "unit": "tce", "factor": 2.64, "emission": 5782, "ratio": 6.5, "dataSource": "仪表采集" },
+    { "id": 9, "source": "其他间接排放", "category": "其他", "scope": "范围二", "activity": 2600, "unit": "t", "factor": 0.8, "emission": 2080, "ratio": 2.3, "dataSource": "估算" }
+  ],
+  "monthlyEmission": [
+    { "month": "1月", "scope1": 2180, "scope2": 4850, "total": 7030 },
+    { "month": "2月", "scope1": 1950, "scope2": 4280, "total": 6230 },
+    { "month": "3月", "scope1": 2320, "scope2": 5120, "total": 7440 },
+    { "month": "4月", "scope1": 2380, "scope2": 5200, "total": 7580 },
+    { "month": "5月", "scope1": 2450, "scope2": 4980, "total": 7430 },
+    { "month": "6月", "scope1": 2520, "scope2": 5350, "total": 7870 }
+  ],
+  "verificationRecords": [
+    { "id": 1, "year": "2024", "totalEmission": 176500, "verified": true, "verifier": "中环联合认证中心", "reportNo": "GHG-2024-00892" },
+    { "id": 2, "year": "2023", "totalEmission": 168200, "verified": true, "verifier": "中环联合认证中心", "reportNo": "GHG-2023-00765" },
+    { "id": 3, "year": "2022", "totalEmission": 172800, "verified": true, "verifier": "中国质量认证中心", "reportNo": "GHG-2022-00543" }
+  ]
+}

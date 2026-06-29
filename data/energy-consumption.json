@@ -1,0 +1,22 @@
+{
+  "records": [
+    { "id": 1, "time": "2026-06-23 08:00", "unit": "企业级 / 第一制造基地", "unitLevel": "企业级", "energyType": "煤炭", "consumption": "18.6 t", "consumptionValue": 18.6, "coalEquivalent": 13.29, "cost": 1.86, "yoy": 4.2, "mom": 5.7, "source": "仪表直采", "status": "异常", "statusType": "critical" },
+    { "id": 2, "time": "2026-06-23 08:00", "unit": "企业级 / 第一制造基地", "unitLevel": "企业级", "energyType": "电力 / 火电", "consumption": "128,000 kWh", "consumptionValue": 128000, "coalEquivalent": 38.40, "cost": 10.88, "yoy": 3.5, "mom": 2.1, "source": "系统对接", "status": "正常", "statusType": "normal" },
+    { "id": 3, "time": "2026-06-23 07:00", "unit": "车间级 / 热处理车间", "unitLevel": "车间级", "energyType": "天然气", "consumption": "12,450 m³", "consumptionValue": 12450, "coalEquivalent": 14.81, "cost": 4.98, "yoy": -2.8, "mom": -1.2, "source": "仪表直采", "status": "偏高", "statusType": "warning" },
+    { "id": 4, "time": "2026-06-23 07:00", "unit": "车间级 / 热处理车间", "unitLevel": "车间级", "energyType": "电力 / 风电", "consumption": "45,280 kWh", "consumptionValue": 45280, "coalEquivalent": 13.58, "cost": 3.81, "yoy": 1.2, "mom": 0.8, "source": "系统对接", "status": "正常", "statusType": "normal" },
+    { "id": 5, "time": "2026-06-22 06:00", "unit": "产线级 / A3连铸产线", "unitLevel": "产线级", "energyType": "电力 / 火电", "consumption": "38,560 kWh", "consumptionValue": 38560, "coalEquivalent": 11.57, "cost": 3.27, "yoy": 2.6, "mom": 3.5, "source": "仪表直采", "status": "正常", "statusType": "normal" },
+    { "id": 6, "time": "2026-06-22 06:00", "unit": "产线级 / A3连铸产线", "unitLevel": "产线级", "energyType": "压缩空气", "consumption": "52,800 m³", "consumptionValue": 52800, "coalEquivalent": 1.98, "cost": 0.53, "yoy": -1.5, "mom": -0.9, "source": "仪表直采", "status": "正常", "statusType": "normal" },
+    { "id": 7, "time": "2026-06-21 16:00", "unit": "仪表级 / EM-2088", "unitLevel": "仪表级", "energyType": "天然气", "consumption": "1,820 m³", "consumptionValue": 1820, "coalEquivalent": 2.17, "cost": 0.73, "yoy": -0.8, "mom": 0.5, "source": "手工录入", "status": "正常", "statusType": "normal" },
+    { "id": 8, "time": "2026-06-21 16:00", "unit": "仪表级 / EM-2088", "unitLevel": "仪表级", "energyType": "氢", "consumption": "420 kg", "consumptionValue": 420, "coalEquivalent": 1.26, "cost": 0.84, "yoy": 1.1, "mom": -0.3, "source": "手工录入", "status": "正常", "statusType": "normal" }
+  ],
+  "summary": {
+    "totalTce": 48326,
+    "totalCost": 12860000,
+    "totalElectricity": 11560000,
+    "totalGas": 582000,
+    "onlineMeters": 418,
+    "completenessRate": 98.7,
+    "abnormalPoints": 6,
+    "dataDelay": 12
+  }
+}

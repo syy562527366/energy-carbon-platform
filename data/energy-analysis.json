@@ -1,0 +1,126 @@
+{
+  "periods": [
+    { "id": "2026-01", "label": "2026年1月" },
+    { "id": "2026-02", "label": "2026年2月" },
+    { "id": "2026-03", "label": "2026年3月" },
+    { "id": "2026-04", "label": "2026年4月" },
+    { "id": "2026-05", "label": "2026年5月" },
+    { "id": "2026-06", "label": "2026年6月" }
+  ],
+  "structureData": {
+    "enterprise": {
+      "labels": ["煤炭", "电力/火电", "天然气", "柴油", "压缩空气", "可再生能源"],
+      "values": [32, 28, 18, 10, 7, 5],
+      "colors": ["#64748B", "#3B82F6", "#F97316", "#8B5CF6", "#10B981", "#22C55E"]
+    },
+    "workshop": {
+      "labels": ["电力/火电", "天然气", "煤炭", "压缩空气"],
+      "values": [45, 30, 18, 7],
+      "colors": ["#3B82F6", "#F97316", "#64748B", "#10B981"]
+    }
+  },
+  "costAnalysis": [
+    { "period": "2026-01", "total": 285.6, "electricity": 142.8, "gas": 68.5, "coal": 52.3, "other": 22.0 },
+    { "period": "2026-02", "total": 272.3, "electricity": 138.2, "gas": 65.1, "coal": 48.6, "other": 20.4 },
+    { "period": "2026-03", "total": 298.7, "electricity": 152.5, "gas": 71.8, "coal": 50.2, "other": 24.2 },
+    { "period": "2026-04", "total": 290.1, "electricity": 148.3, "gas": 69.2, "coal": 49.8, "other": 22.8 },
+    { "period": "2026-05", "total": 305.4, "electricity": 156.8, "gas": 73.5, "coal": 51.6, "other": 23.5 },
+    { "period": "2026-06", "total": 312.8, "electricity": 162.4, "gas": 75.2, "coal": 50.8, "other": 24.4 }
+  ],
+  "efficiencyAnalysis": [
+    { "unit": "企业级 / 第一制造基地", "unitLevel": "企业级", "energyIntensity": 0.087, "industryAvg": 0.102, "industryAdv": 0.068, "trend": "up", "score": 78 },
+    { "unit": "车间级 / 热处理车间", "unitLevel": "车间级", "energyIntensity": 0.106, "industryAvg": 0.115, "industryAdv": 0.075, "trend": "down", "score": 65 },
+    { "unit": "产线级 / A3连铸产线", "unitLevel": "产线级", "energyIntensity": 0.048, "industryAvg": 0.055, "industryAdv": 0.040, "trend": "up", "score": 82 },
+    { "unit": "产线级 / B1轧钢产线", "unitLevel": "产线级", "energyIntensity": 0.095, "industryAvg": 0.100, "industryAdv": 0.072, "trend": "stable", "score": 70 },
+    { "unit": "仪表级 / EM-2088", "unitLevel": "仪表级", "energyIntensity": 0.112, "industryAvg": 0.115, "industryAdv": 0.075, "trend": "down", "score": 60 }
+  ],
+  "recommendations": [
+    {
+      "id": 1,
+      "title": "热处理车间余热回收改造",
+      "category": "设备改造",
+      "description": "热处理车间烟气温度达450℃，建议加装余热回收装置，预热助燃空气或生产蒸汽",
+      "expectedSaving": "12.8 万/年",
+      "expectedTce": 86,
+      "investment": "中",
+      "payback": "18个月",
+      "status": "recommended",
+      "priority": "high",
+      "tags": ["余热回收", "热处理", "节能"]
+    },
+    {
+      "id": 2,
+      "title": "压缩空气系统管网优化",
+      "category": "系统优化",
+      "description": "压缩空气管网存在多处泄漏点，建议开展管网检测与修复，降低空压机负载",
+      "expectedSaving": "6.5 万/年",
+      "expectedTce": 42,
+      "investment": "低",
+      "payback": "6个月",
+      "status": "recommended",
+      "priority": "high",
+      "tags": ["压缩空气", "管网", "泄漏检测"]
+    },
+    {
+      "id": 3,
+      "title": "厂房屋顶分布式光伏建设",
+      "category": "能源替代",
+      "description": "第一制造基地屋面面积约3万m²，可建设约3MW分布式光伏电站，年发电约300万kWh",
+      "expectedSaving": "36.0 万/年",
+      "expectedTce": 240,
+      "investment": "高",
+      "payback": "5年",
+      "status": "planned",
+      "priority": "medium",
+      "tags": ["光伏", "可再生能源", "绿电"]
+    },
+    {
+      "id": 4,
+      "title": "A3连铸产线变频改造",
+      "category": "设备改造",
+      "description": "A3产线冷却水泵、风机等大功率设备加装变频器，根据负荷自动调节运行频率",
+      "expectedSaving": "8.2 万/年",
+      "expectedTce": 55,
+      "investment": "中",
+      "payback": "14个月",
+      "status": "recommended",
+      "priority": "high",
+      "tags": ["变频", "电机", "产线"]
+    },
+    {
+      "id": 5,
+      "title": "能源管理数字化平台升级",
+      "category": "管理优化",
+      "description": "完善二级/三级计量体系，实现用能单元级精细化考核，建立能耗预警机制",
+      "expectedSaving": "15.0 万/年",
+      "expectedTce": 98,
+      "investment": "中",
+      "payback": "24个月",
+      "status": "planned",
+      "priority": "medium",
+      "tags": ["数字化", "计量", "考核"]
+    },
+    {
+      "id": 6,
+      "title": "绿色电力直购签约",
+      "category": "能源采购",
+      "description": "通过电力市场化交易，签约风电/光伏绿色电力，降低用电成本同时获取绿证",
+      "expectedSaving": "22.0 万/年",
+      "expectedTce": 0,
+      "investment": "低",
+      "payback": "即时",
+      "status": "evaluating",
+      "priority": "low",
+      "tags": ["绿电", "碳减排", "直购"]
+    }
+  ],
+  "summary": {
+    "totalEnergyCost": 1764.9,
+    "costTrend": 4.2,
+    "avgEfficiency": 0.0896,
+    "efficiencyTrend": -1.8,
+    "recommendationCount": 6,
+    "totalSaving": 100.5,
+    "totalTceSaving": 521
+  }
+}

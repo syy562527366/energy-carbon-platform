@@ -1,0 +1,36 @@
+{
+  "periods": [
+    { "id": "2026-01", "label": "2026年1月" },
+    { "id": "2026-02", "label": "2026年2月" },
+    { "id": "2026-03", "label": "2026年3月" },
+    { "id": "2026-04", "label": "2026年4月" },
+    { "id": "2026-05", "label": "2026年5月" },
+    { "id": "2026-06", "label": "2026年6月" }
+  ],
+  "benchmarkTargets": [
+    { "id": 1, "name": "热轧卷板单位产品能耗", "category": "单位产品能耗", "unit": "kgec/t", "actual": 58.6, "limit": 61.0, "advanced": 52.0, "baseline": 63.0, "status": "达标", "trend": "up" },
+    { "id": 2, "name": "连铸坯单位产品能耗", "category": "单位产品能耗", "unit": "kgec/t", "actual": 48.2, "limit": 52.0, "advanced": 43.0, "baseline": 54.0, "status": "达标", "trend": "up" },
+    { "id": 3, "name": "热处理件单位产品能耗", "category": "单位产品能耗", "unit": "kgec/t", "actual": 106.7, "limit": 100.0, "advanced": 85.0, "baseline": 105.0, "status": "未达标", "trend": "down" },
+    { "id": 4, "name": "轧钢加热炉能效", "category": "设备能效", "unit": "%", "actual": 68.5, "limit": 72.0, "advanced": 80.0, "baseline": 70.0, "status": "未达标", "trend": "stable" },
+    { "id": 5, "name": "空压机组能效", "category": "设备能效", "unit": "kW·h/m³", "actual": 0.118, "limit": 0.130, "advanced": 0.100, "baseline": 0.135, "status": "达标", "trend": "up" },
+    { "id": 6, "name": "循环水泵能效", "category": "设备能效", "unit": "%", "actual": 76.2, "limit": 75.0, "advanced": 85.0, "baseline": 72.0, "status": "达标", "trend": "up" },
+    { "id": 7, "name": "变压器负载率", "category": "设备能效", "unit": "%", "actual": 42.5, "limit": 50.0, "advanced": 65.0, "baseline": 45.0, "status": "未达标", "trend": "down" },
+    { "id": 8, "name": "综合能耗（吨钢）", "category": "行业对标", "unit": "kgec/t", "actual": 586, "limit": 620, "advanced": 520, "baseline": 640, "status": "达标", "trend": "up" }
+  ],
+  "historyData": [
+    { "period": "2026-01", "达标数": 5, "未达标数": 3, "达标率": 62.5 },
+    { "period": "2026-02", "达标数": 5, "未达标数": 3, "达标率": 62.5 },
+    { "period": "2026-03", "达标数": 6, "未达标数": 2, "达标率": 75.0 },
+    { "period": "2026-04", "达标数": 6, "未达标数": 2, "达标率": 75.0 },
+    { "period": "2026-05", "达标数": 5, "未达标数": 3, "达标率": 62.5 },
+    { "period": "2026-06", "达标数": 5, "未达标数": 3, "达标率": 62.5 }
+  ],
+  "summary": {
+    "totalTargets": 8,
+    "达标数": 5,
+    "未达标数": 3,
+    "达标率": 62.5,
+    "avgGap": 8.2,
+    "trend": -2.1
+  }
+}

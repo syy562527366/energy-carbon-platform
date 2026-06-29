@@ -1,0 +1,27 @@
+{
+  "summary": {
+    "totalRecords": 48,
+    "verifiedRecords": 36,
+    "pendingReview": 8,
+    "issuesFound": 4,
+    "lastAuditDate": "2026-05-20",
+    "auditCycle": "年度核查"
+  },
+  "auditItems": [
+    { "id": 1, "source": "锅炉燃煤排放", "dataSource": "仪表采集DCS-001", "dataValue": "11616 tCO₂", "supportDoc": "DCS日报表_2026H1.pdf", "status": "已核查", "verifier": "张三", "issue": null, "comment": "数据与DCS系统一致" },
+    { "id": 2, "source": "外购电力排放", "dataSource": "电网电费账单", "dataValue": "20084 tCO₂", "supportDoc": "电费单_2026年1-6月.pdf", "status": "已核查", "verifier": "张三", "issue": null, "comment": "电费单与活动数据一致" },
+    { "id": 3, "source": "柴油消耗排放", "dataSource": "加油记录台账", "dataValue": "1455 tCO₂", "supportDoc": "油料领用台账_2026H1.xlsx", "status": "待核查", "verifier": null, "issue": "部分月份加油记录签字缺失", "comment": "需补充签字确认" },
+    { "id": 4, "source": "生产工艺排放", "dataSource": "MES系统产量数据", "dataValue": "10490 tCO₂", "supportDoc": "MES产量报表_2026H1.xlsx", "status": "有异议", "verifier": "李四", "issue": "排放因子选用与上年不一致", "comment": "2025年用1.35，本年用1.28，需提供变更依据" },
+    { "id": 5, "source": "天然气燃烧排放", "dataSource": "燃气表G-002", "dataValue": "4939 tCO₂", "supportDoc": "燃气抄表记录_2026H1.xlsx", "status": "已核查", "verifier": "张三", "issue": null, "comment": "数据与抄表记录一致" },
+    { "id": 6, "source": "自备电厂发电排放", "dataSource": "发电量日报表", "dataValue": "5782 tCO₂", "supportDoc": "发电日报_2026H1.pdf", "status": "待核查", "verifier": null, "issue": null, "comment": "" },
+    { "id": 7, "source": "外购蒸汽排放", "dataSource": "热力结算单", "dataValue": "1042 tCO₂", "supportDoc": "热力结算_2026H1.pdf", "status": "有异议", "verifier": "李四", "issue": "热力排放因子需核实", "comment": "供应商提供的蒸汽参数与默认因子差异较大" },
+    { "id": 8, "source": "焦炭消耗排放", "dataSource": "焦炭入库台账", "dataValue": "1012 tCO₂", "supportDoc": "焦炭领用记录_2026H1.xlsx", "status": "已核查", "verifier": "张三", "issue": null, "comment": "数据与台账一致" }
+  ],
+  "traceChain": [
+    { "step": 1, "action": "原始数据采集", "source": "DCS系统 #001", "time": "2026-06-30 23:59", "operator": "系统自动", "data": "锅炉燃煤量: 4400 tce" },
+    { "step": 2, "action": "数据审核", "source": "审核流程", "time": "2026-07-01 09:30", "operator": "王工", "data": "审核通过，数据无异常波动" },
+    { "step": 3, "action": "排放因子匹配", "source": "因子库", "time": "2026-07-01 10:00", "operator": "系统自动", "data": "匹配因子: 2.64 tCO₂/tce (无烟煤)" },
+    { "step": 4, "action": "排放量计算", "source": "核算模型", "time": "2026-07-01 10:05", "operator": "系统自动", "data": "排放量 = 4400 × 2.64 = 11,616 tCO₂" },
+    { "step": 5, "action": "数据归集", "source": "汇总模块", "time": "2026-07-01 10:30", "operator": "系统自动", "data": "归集至范围一·燃料燃烧类别" }
+  ]
+}

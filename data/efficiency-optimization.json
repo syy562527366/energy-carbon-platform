@@ -1,0 +1,54 @@
+{
+  "summary": {
+    "overallEfficiency": 73.0,
+    "optimizationPotential": 12.5,
+    "expectedSavings": 1572,
+    "implementationProgress": 35,
+    "optimizedCount": 7,
+    "totalMeasures": 20,
+    "efficiencyChange": 2.1,
+    "savingsChange": 5.8
+  },
+  "balanceDimensions": [
+    { "name": "转换效率", "current": 87.6, "target": 92.0, "benchmark": 90.0 },
+    { "name": "输送效率", "current": 94.8, "target": 96.0, "benchmark": 95.0 },
+    { "name": "终端利用率", "current": 68.3, "target": 78.0, "benchmark": 75.0 },
+    { "name": "余热回收率", "current": 32.0, "target": 55.0, "benchmark": 50.0 },
+    { "name": "设备平均能效", "current": 71.0, "target": 82.0, "benchmark": 80.0 },
+    { "name": "可再生能源占比", "current": 8.5, "target": 15.0, "benchmark": 12.0 }
+  ],
+  "processOptimizations": [
+    { "id": 1, "process": "锅炉燃烧优化", "parameter": "空燃比", "current": "1.35", "optimized": "1.22", "savings": 340, "savingsUnit": "tce", "status": "已实施", "description": "优化空燃比降低排烟热损失，预期年节约标准煤340吨", "implementDate": "2026-03" },
+    { "id": 2, "process": "蒸汽管网压力调整", "parameter": "运行压力", "current": "1.2MPa", "optimized": "0.9MPa", "savings": 280, "savingsUnit": "tce", "status": "已实施", "description": "降低管网压力减少泄漏和散热损失，预期年节约标准煤280吨", "implementDate": "2026-04" },
+    { "id": 3, "process": "空压机群控优化", "parameter": "启停策略", "current": "人工控制", "optimized": "自动群控", "savings": 195, "savingsUnit": "tce", "status": "优化中", "description": "根据用气负荷自动调节空压机运行台数，减少空载损耗", "implementDate": "2026-06" },
+    { "id": 4, "process": "加热炉富氧燃烧", "parameter": "氧含量", "current": "21%", "optimized": "28%", "savings": 230, "savingsUnit": "tce", "status": "待验证", "description": "采用富氧燃烧技术提升火焰温度，提高热效率", "implementDate": "2026-07" },
+    { "id": 5, "process": "余热回收利用", "parameter": "烟气温度", "current": "280°C", "optimized": "160°C", "savings": 420, "savingsUnit": "tce", "status": "待优化", "description": "增设烟气余热回收装置预热助燃空气和给水", "implementDate": "2026-08" },
+    { "id": 6, "process": "照明系统升级", "parameter": "功率密度", "current": "12W/m²", "optimized": "6W/m²", "savings": 107, "savingsUnit": "tce", "status": "待优化", "description": "全面替换LED灯具并加装智能感应调光系统", "implementDate": "2026-09" }
+  ],
+  "equipmentOptimizations": [
+    { "id": 1, "equipment": "空压机", "parameter": "排气压力", "current": "0.8MPa", "recommended": "0.65MPa", "savings": 120, "status": "待优化" },
+    { "id": 2, "equipment": "冷却水泵", "parameter": "转速", "current": "1480rpm", "recommended": "1200rpm", "savings": 85, "status": "优化中" },
+    { "id": 3, "equipment": "引风机", "parameter": "风门开度", "current": "65%", "recommended": "变频85%", "savings": 95, "status": "待优化" },
+    { "id": 4, "equipment": "变压器", "parameter": "负载率", "current": "38%", "recommended": "65%", "savings": 52, "status": "已优化" },
+    { "id": 5, "equipment": "空调主机", "parameter": "出水温度", "current": "7°C", "recommended": "10°C", "savings": 68, "status": "优化中" }
+  ],
+  "comparisonData": {
+    "optimizedItems": [
+      { "name": "综合能效", "before": 53.1, "after": 56.9, "unit": "%", "improvement": 7.2 },
+      { "name": "转换效率", "before": 85.2, "after": 87.6, "unit": "%", "improvement": 2.8 },
+      { "name": "输送效率", "before": 93.8, "after": 94.8, "unit": "%", "improvement": 1.1 },
+      { "name": "终端利用率", "before": 66.5, "after": 68.3, "unit": "%", "improvement": 2.7 },
+      { "name": "能源损耗率", "before": 47.0, "after": 43.1, "unit": "%", "improvement": -8.3 },
+      { "name": "能耗强度", "before": 0.85, "after": 0.76, "unit": "tce/万元", "improvement": -10.6 }
+    ],
+    "totalSavings": 1572
+  },
+  "monthlySavings": [
+    { "month": "1月", "actual": 0, "planned": 80 },
+    { "month": "2月", "actual": 45, "planned": 80 },
+    { "month": "3月", "actual": 92, "planned": 120 },
+    { "month": "4月", "actual": 110, "planned": 120 },
+    { "month": "5月", "actual": 135, "planned": 150 },
+    { "month": "6月", "actual": 158, "planned": 150 }
+  ]
+}

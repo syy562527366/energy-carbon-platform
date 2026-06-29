@@ -1,0 +1,36 @@
+{
+  "summary": {
+    "totalProducts": 6,
+    "activeProducts": 4,
+    "avgCarbonFootprint": 2.85,
+    "avgUnit": "kgCO₂e/kg",
+    "highestProduct": "特种合金钢",
+    "highestValue": 4.62,
+    "lowestProduct": "建筑钢材",
+    "lowestValue": 1.85,
+    "totalReduction": 8.5
+  },
+  "products": [
+    { "id": 1, "name": "热轧卷板", "spec": "Q235B 3.0mm", "footprint": 2.35, "unit": "kgCO₂e/kg", "boundary": "cradle-to-gate", "status": "已核算", "lastUpdated": "2026-06-15", "trend": -3.2 },
+    { "id": 2, "name": "冷轧卷板", "spec": "DC01 1.0mm", "footprint": 2.88, "unit": "kgCO₂e/kg", "boundary": "cradle-to-gate", "status": "已核算", "lastUpdated": "2026-06-15", "trend": -2.8 },
+    { "id": 3, "name": "镀锌板", "spec": "DX51D 0.8mm", "footprint": 3.15, "unit": "kgCO₂e/kg", "boundary": "cradle-to-gate", "status": "已核算", "lastUpdated": "2026-06-10", "trend": -1.5 },
+    { "id": 4, "name": "特种合金钢", "spec": "40Cr 50mm", "footprint": 4.62, "unit": "kgCO₂e/kg", "boundary": "cradle-to-gate", "status": "核算中", "lastUpdated": "2026-06-20", "trend": 0 },
+    { "id": 5, "name": "建筑钢材", "spec": "HRB400 25mm", "footprint": 1.85, "unit": "kgCO₂e/kg", "boundary": "cradle-to-gate", "status": "已核算", "lastUpdated": "2026-06-01", "trend": -5.1 },
+    { "id": 6, "name": "精密带钢", "spec": "65Mn 0.5mm", "footprint": 3.42, "unit": "kgCO₂e/kg", "boundary": "cradle-to-gate", "status": "待核算", "lastUpdated": "2026-05-28", "trend": 0 }
+  ],
+  "footprintBreakdown": [
+    { "stage": "原材料获取", "ratio": 42, "color": "#64748B", "description": "铁矿石、合金、废钢等原材料开采和加工" },
+    { "stage": "运输物流", "ratio": 8, "color": "#3B82F6", "description": "原材料运输、厂内物流" },
+    { "stage": "生产制造", "ratio": 35, "color": "#F97316", "description": "冶炼、轧制、热处理等生产过程能耗" },
+    { "stage": "辅助生产", "ratio": 10, "color": "#10B981", "description": "压缩空气、水处理、照明等辅助系统" },
+    { "stage": "包装储运", "ratio": 5, "color": "#8B5CF6", "description": "产品包装、仓储和出厂运输" }
+  ],
+  "monthlyFootprint": [
+    { "month": "1月", "热轧卷板": 2.42, "冷轧卷板": 2.95, "镀锌板": 3.20, "建筑钢材": 1.92 },
+    { "month": "2月", "热轧卷板": 2.40, "冷轧卷板": 2.92, "镀锌板": 3.18, "建筑钢材": 1.90 },
+    { "month": "3月", "热轧卷板": 2.38, "冷轧卷板": 2.90, "镀锌板": 3.16, "建筑钢材": 1.88 },
+    { "month": "4月", "热轧卷板": 2.36, "冷轧卷板": 2.88, "镀锌板": 3.15, "建筑钢材": 1.86 },
+    { "month": "5月", "热轧卷板": 2.35, "冷轧卷板": 2.88, "镀锌板": 3.15, "建筑钢材": 1.85 },
+    { "month": "6月", "热轧卷板": 2.35, "冷轧卷板": 2.88, "镀锌板": 3.15, "建筑钢材": 1.85 }
+  ]
+}

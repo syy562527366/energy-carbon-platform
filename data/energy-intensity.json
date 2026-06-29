@@ -1,0 +1,166 @@
+{
+  "periods": [
+    { "id": "2026-01", "label": "2026年1月" },
+    { "id": "2026-02", "label": "2026年2月" },
+    { "id": "2026-03", "label": "2026年3月" },
+    { "id": "2026-04", "label": "2026年4月" },
+    { "id": "2026-05", "label": "2026年5月" },
+    { "id": "2026-06", "label": "2026年6月" }
+  ],
+  "records": [
+    {
+      "id": 1,
+      "period": "2026-06",
+      "unit": "企业级 / 第一制造基地",
+      "unitLevel": "企业级",
+      "product": "热轧卷板",
+      "output": 12500,
+      "outputUnit": "吨",
+      "outputValue": 15680,
+      "outputValueUnit": "万元",
+      "energyItems": [
+        { "name": "煤炭", "consumption": 1285, "unit": "t", "factor": 0.7143, "factorType": "当量值", "tce": 917.88 },
+        { "name": "焦炭", "consumption": 320, "unit": "t", "factor": 0.9714, "factorType": "当量值", "tce": 310.85 },
+        { "name": "天然气", "consumption": 58.2, "unit": "万m³", "factor": 1.2143, "factorType": "当量值", "tce": 70.67 },
+        { "name": "电力", "consumption": 11560, "unit": "MWh", "factor": 0.1229, "factorType": "当量值", "tce": 1420.72 },
+        { "name": "柴油", "consumption": 186, "unit": "t", "factor": 1.4571, "factorType": "当量值", "tce": 271.02 },
+        { "name": "压缩空气", "consumption": 320, "unit": "万m³", "factor": 0.0400, "factorType": "当量值", "tce": 12.80 }
+      ],
+      "totalTce": 3003.94,
+      "unitProductTce": 0.2403,
+      "unitOutputTce": 0.1916,
+      "status": "正常",
+      "statusType": "normal"
+    },
+    {
+      "id": 2,
+      "period": "2026-05",
+      "unit": "企业级 / 第一制造基地",
+      "unitLevel": "企业级",
+      "product": "热轧卷板",
+      "output": 12100,
+      "outputUnit": "吨",
+      "outputValue": 15200,
+      "outputValueUnit": "万元",
+      "energyItems": [
+        { "name": "煤炭", "consumption": 1260, "unit": "t", "factor": 0.7143, "factorType": "当量值", "tce": 900.02 },
+        { "name": "焦炭", "consumption": 310, "unit": "t", "factor": 0.9714, "factorType": "当量值", "tce": 301.13 },
+        { "name": "天然气", "consumption": 56.8, "unit": "万m³", "factor": 1.2143, "factorType": "当量值", "tce": 68.97 },
+        { "name": "电力", "consumption": 11200, "unit": "MWh", "factor": 0.1229, "factorType": "当量值", "tce": 1376.48 },
+        { "name": "柴油", "consumption": 175, "unit": "t", "factor": 1.4571, "factorType": "当量值", "tce": 254.99 },
+        { "name": "压缩空气", "consumption": 315, "unit": "万m³", "factor": 0.0400, "factorType": "当量值", "tce": 12.60 }
+      ],
+      "totalTce": 2914.19,
+      "unitProductTce": 0.2408,
+      "unitOutputTce": 0.1917,
+      "status": "正常",
+      "statusType": "normal"
+    },
+    {
+      "id": 3,
+      "period": "2026-04",
+      "unit": "企业级 / 第一制造基地",
+      "unitLevel": "企业级",
+      "product": "热轧卷板",
+      "output": 11800,
+      "outputUnit": "吨",
+      "outputValue": 14850,
+      "outputValueUnit": "万元",
+      "energyItems": [
+        { "name": "煤炭", "consumption": 1240, "unit": "t", "factor": 0.7143, "factorType": "当量值", "tce": 885.73 },
+        { "name": "焦炭", "consumption": 305, "unit": "t", "factor": 0.9714, "factorType": "当量值", "tce": 296.28 },
+        { "name": "天然气", "consumption": 55.2, "unit": "万m³", "factor": 1.2143, "factorType": "当量值", "tce": 67.03 },
+        { "name": "电力", "consumption": 10800, "unit": "MWh", "factor": 0.1229, "factorType": "当量值", "tce": 1327.32 },
+        { "name": "柴油", "consumption": 168, "unit": "t", "factor": 1.4571, "factorType": "当量值", "tce": 244.79 },
+        { "name": "压缩空气", "consumption": 308, "unit": "万m³", "factor": 0.0400, "factorType": "当量值", "tce": 12.32 }
+      ],
+      "totalTce": 2833.47,
+      "unitProductTce": 0.2401,
+      "unitOutputTce": 0.1908,
+      "status": "正常",
+      "statusType": "normal"
+    },
+    {
+      "id": 4,
+      "period": "2026-06",
+      "unit": "车间级 / 热处理车间",
+      "unitLevel": "车间级",
+      "product": "热处理件",
+      "output": 3800,
+      "outputUnit": "吨",
+      "outputValue": 4560,
+      "outputValueUnit": "万元",
+      "energyItems": [
+        { "name": "天然气", "consumption": 42.5, "unit": "万m³", "factor": 1.2143, "factorType": "当量值", "tce": 51.61 },
+        { "name": "电力", "consumption": 2850, "unit": "MWh", "factor": 0.1229, "factorType": "当量值", "tce": 350.27 },
+        { "name": "压缩空气", "consumption": 85, "unit": "万m³", "factor": 0.0400, "factorType": "当量值", "tce": 3.40 }
+      ],
+      "totalTce": 405.28,
+      "unitProductTce": 0.1067,
+      "unitOutputTce": 0.0889,
+      "status": "偏高",
+      "statusType": "warning"
+    },
+    {
+      "id": 5,
+      "period": "2026-06",
+      "unit": "产线级 / A3连铸产线",
+      "unitLevel": "产线级",
+      "product": "连铸坯",
+      "output": 8200,
+      "outputUnit": "吨",
+      "outputValue": 10250,
+      "outputValueUnit": "万元",
+      "energyItems": [
+        { "name": "电力", "consumption": 3850, "unit": "MWh", "factor": 0.1229, "factorType": "当量值", "tce": 473.17 },
+        { "name": "天然气", "consumption": 18.6, "unit": "万m³", "factor": 1.2143, "factorType": "当量值", "tce": 22.59 }
+      ],
+      "totalTce": 495.76,
+      "unitProductTce": 0.0605,
+      "unitOutputTce": 0.0484,
+      "status": "正常",
+      "statusType": "normal"
+    },
+    {
+      "id": 6,
+      "period": "2026-05",
+      "unit": "产线级 / A3连铸产线",
+      "unitLevel": "产线级",
+      "product": "连铸坯",
+      "output": 8000,
+      "outputUnit": "吨",
+      "outputValue": 10000,
+      "outputValueUnit": "万元",
+      "energyItems": [
+        { "name": "电力", "consumption": 3720, "unit": "MWh", "factor": 0.1229, "factorType": "当量值", "tce": 457.19 },
+        { "name": "天然气", "consumption": 18.0, "unit": "万m³", "factor": 1.2143, "factorType": "当量值", "tce": 21.86 }
+      ],
+      "totalTce": 479.05,
+      "unitProductTce": 0.0599,
+      "unitOutputTce": 0.0479,
+      "status": "正常",
+      "statusType": "normal"
+    }
+  ],
+  "conversionFactors": [
+    { "name": "煤炭", "factor": 0.7143, "unit": "tce/t", "type": "当量值" },
+    { "name": "焦炭", "factor": 0.9714, "unit": "tce/t", "type": "当量值" },
+    { "name": "原油", "factor": 1.4286, "unit": "tce/t", "type": "当量值" },
+    { "name": "汽油", "factor": 1.4714, "unit": "tce/t", "type": "当量值" },
+    { "name": "煤油", "factor": 1.4714, "unit": "tce/t", "type": "当量值" },
+    { "name": "柴油", "factor": 1.4571, "unit": "tce/t", "type": "当量值" },
+    { "name": "燃料油", "factor": 1.4286, "unit": "tce/t", "type": "当量值" },
+    { "name": "天然气", "factor": 1.2143, "unit": "tce/万m³", "type": "当量值" },
+    { "name": "电力", "factor": 0.1229, "unit": "tce/MWh", "type": "当量值" },
+    { "name": "电力(等价值)", "factor": 0.3300, "unit": "tce/MWh", "type": "等价值" },
+    { "name": "压缩空气", "factor": 0.0400, "unit": "tce/万m³", "type": "当量值" },
+    { "name": "氢", "factor": 2.0000, "unit": "tce/t", "type": "当量值" }
+  ],
+  "summary": {
+    "totalPeriods": 6,
+    "totalRecords": 6,
+    "monthlyAvgTce": 2645.33,
+    "monthlyAvgProductTce": 0.1496,
+    "monthlyAvgOutputTce": 0.1213
+  }
+}

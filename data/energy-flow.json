@@ -1,0 +1,112 @@
+{
+  "summary": {
+    "totalInput": 12580,
+    "totalInputUnit": "tce",
+    "conversionEfficiency": 87.6,
+    "transmissionLossRate": 5.2,
+    "endUseRate": 68.3,
+    "totalLoss": 3978,
+    "topLossLink": "蒸汽管网输送",
+    "topLossRate": 8.3,
+    "inputTrend": 2.1,
+    "efficiencyTrend": 1.5
+  },
+  "energyInputs": [
+    { "name": "煤炭", "value": 4400, "unit": "tce", "ratio": 35.0, "color": "#64748B" },
+    { "name": "电力（外购）", "value": 3380, "unit": "tce", "ratio": 26.9, "color": "#3B82F6" },
+    { "name": "天然气", "value": 2520, "unit": "tce", "ratio": 20.0, "color": "#F97316" },
+    { "name": "柴油", "value": 680, "unit": "tce", "ratio": 5.4, "color": "#8B5CF6" },
+    { "name": "焦炭", "value": 350, "unit": "tce", "ratio": 2.8, "color": "#1E293B" },
+    { "name": "氢", "value": 280, "unit": "tce", "ratio": 2.2, "color": "#06B6D4" },
+    { "name": "蒸汽（外购）", "value": 420, "unit": "tce", "ratio": 3.3, "color": "#10B981" },
+    { "name": "生物质", "value": 120, "unit": "tce", "ratio": 1.0, "color": "#84CC16" },
+    { "name": "压缩空气", "value": 230, "unit": "tce", "ratio": 1.8, "color": "#A1A1AA" }
+  ],
+  "conversionStages": [
+    {
+      "stage": "输入端",
+      "total": 12580,
+      "detail": [
+        { "source": "煤炭", "value": 4400 },
+        { "source": "电力（外购）", "value": 3380 },
+        { "source": "天然气", "value": 2520 },
+        { "source": "柴油", "value": 680 },
+        { "source": "焦炭", "value": 350 },
+        { "source": "氢", "value": 280 },
+        { "source": "蒸汽（外购）", "value": 420 },
+        { "source": "生物质", "value": 120 },
+        { "source": "压缩空气", "value": 230 }
+      ]
+    },
+    {
+      "stage": "转换环节",
+      "total": 11020,
+      "efficiency": 87.6,
+      "loss": 1560,
+      "lossRate": 12.4,
+      "detail": [
+        { "source": "锅炉蒸汽", "value": 3892, "from": "煤炭" },
+        { "source": "自发电", "value": 2190, "from": "煤炭+天然气" },
+        { "source": "直供电", "value": 3598, "from": "电力（外购）" },
+        { "source": "加热炉", "value": 684, "from": "天然气" },
+        { "source": "柴油动力", "value": 519, "from": "柴油" },
+        { "source": "其他", "value": 137, "from": "压缩空气+蒸汽" }
+      ]
+    },
+    {
+      "stage": "输送环节",
+      "total": 10448,
+      "efficiency": 94.8,
+      "loss": 572,
+      "lossRate": 5.2,
+      "detail": [
+        { "source": "蒸汽管网", "value": 3650, "loss": 330, "lossRate": 8.3 },
+        { "source": "供电线路", "value": 5720, "loss": 172, "lossRate": 2.9 },
+        { "source": "燃气管网", "value": 700, "loss": 35, "lossRate": 4.8 },
+        { "source": "压缩空气管路", "value": 230, "loss": 20, "lossRate": 8.0 },
+        { "source": "供热管网", "value": 148, "loss": 15, "lossRate": 9.2 }
+      ]
+    },
+    {
+      "stage": "终端利用",
+      "total": 8595,
+      "efficiency": 82.3,
+      "loss": 1853,
+      "lossRate": 17.7,
+      "detail": [
+        { "source": "生产工艺", "value": 4860, "ratio": 56.5 },
+        { "source": "暖通空调", "value": 1680, "ratio": 19.5 },
+        { "source": "照明", "value": 580, "ratio": 6.8 },
+        { "source": "辅助设施", "value": 920, "ratio": 10.7 },
+        { "source": "其他", "value": 555, "ratio": 6.5 }
+      ]
+    }
+  ],
+  "lossAnalysis": [
+    { "id": 1, "link": "锅炉燃烧不完全", "stage": "转换环节", "loss": 680, "lossRate": 5.4, "suggestion": "优化锅炉空燃比，加强烟气分析监测", "priority": "高" },
+    { "id": 2, "link": "蒸汽管网泄漏及散热", "stage": "输送环节", "loss": 330, "lossRate": 8.3, "suggestion": "加强管网保温维护，更换老化阀门", "priority": "高" },
+    { "id": 3, "link": "供热管网散热损失", "stage": "输送环节", "loss": 148, "lossRate": 9.2, "suggestion": "升级管网保温层，优化管网布局", "priority": "高" },
+    { "id": 4, "link": "压缩空气管路泄漏", "stage": "输送环节", "loss": 20, "lossRate": 8.0, "suggestion": "定期检测管路接头泄漏点，安装流量计监控", "priority": "中" },
+    { "id": 5, "link": "供电线路线损", "stage": "输送环节", "loss": 172, "lossRate": 2.9, "suggestion": "合理调配负荷，减少无功损耗", "priority": "低" },
+    { "id": 6, "link": "工艺设备余热未回收", "stage": "终端利用", "loss": 920, "lossRate": 10.7, "suggestion": "增设余热回收装置，回收工业炉窑排气余热", "priority": "高" },
+    { "id": 7, "link": "暖通系统能效偏低", "stage": "终端利用", "loss": 504, "lossRate": 5.9, "suggestion": "更换高效空调设备，优化运行策略", "priority": "中" },
+    { "id": 8, "link": "自发电机组效率不足", "stage": "转换环节", "loss": 420, "lossRate": 3.3, "suggestion": "优化燃气轮机运行参数，考虑热电联产", "priority": "中" },
+    { "id": 9, "link": "照明系统耗能", "stage": "终端利用", "loss": 145, "lossRate": 1.7, "suggestion": "全面替换LED灯具，加装智能调光系统", "priority": "低" }
+  ],
+  "efficiencyTrend": [
+    { "month": "1月", "conversionEff": 85.2, "transmissionEff": 93.8, "endUseEff": 66.5, "overallEff": 53.1 },
+    { "month": "2月", "conversionEff": 85.8, "transmissionEff": 94.1, "endUseEff": 67.2, "overallEff": 54.2 },
+    { "month": "3月", "conversionEff": 86.3, "transmissionEff": 94.5, "endUseEff": 67.8, "overallEff": 55.3 },
+    { "month": "4月", "conversionEff": 86.9, "transmissionEff": 94.8, "endUseEff": 68.1, "overallEff": 56.1 },
+    { "month": "5月", "conversionEff": 87.2, "transmissionEff": 95.0, "endUseEff": 68.0, "overallEff": 56.6 },
+    { "month": "6月", "conversionEff": 87.6, "transmissionEff": 94.8, "endUseEff": 68.3, "overallEff": 56.9 }
+  ],
+  "topEnergyNodes": [
+    { "name": "锅炉房", "type": "转换", "consumption": 4850, "ratio": 38.6, "efficiency": 82.1, "status": "关注" },
+    { "name": "空压站", "type": "转换", "consumption": 230, "ratio": 1.8, "efficiency": 72.5, "status": "预警" },
+    { "name": "蒸汽管网", "type": "输送", "consumption": 3980, "ratio": 31.6, "efficiency": 91.7, "status": "关注" },
+    { "name": "供电系统", "type": "输送", "consumption": 5920, "ratio": 47.1, "efficiency": 97.1, "status": "正常" },
+    { "name": "生产工艺线", "type": "终端", "consumption": 4860, "ratio": 38.6, "efficiency": 79.5, "status": "关注" },
+    { "name": "暖通空调", "type": "终端", "consumption": 1680, "ratio": 13.4, "efficiency": 70.0, "status": "预警" }
+  ]
+}
