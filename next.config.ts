@@ -1,7 +1,7 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  output: 'standalone',
+  // EdgeOne Pages handles serverless runtime - no need for standalone output
 };
 
 export default nextConfig;
