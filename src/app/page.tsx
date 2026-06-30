@@ -425,7 +425,7 @@ export default function EnergyQueryPage() {
                 ))}
               </div>
             </div>
-            <div className="h-[260px]">
+            <div className="h-[260px] chart-entrance">
               <Line
                 data={trendChartData[timelineView]}
                 options={{
@@ -434,11 +434,11 @@ export default function EnergyQueryPage() {
                   interaction: { intersect: false, mode: 'index' },
                   plugins: {
                     legend: { position: 'bottom', labels: { usePointStyle: true, padding: 16, font: { size: 11 } } },
-                    tooltip: { backgroundColor: '#0F172A', padding: 10, cornerRadius: 8 },
+                    tooltip: { backgroundColor: '#0F172A', padding: 10, cornerRadius: 8, callbacks: { label: (ctx: any) => `${ctx.dataset.label}: ${ctx.parsed.y} tce` } },
                   },
                   scales: {
                     x: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#94A3B8' } },
-                    y: { grid: { color: '#F1F5F9' }, ticks: { font: { size: 11 }, color: '#94A3B8' } },
+                    y: { grid: { color: '#F1F5F9' }, ticks: { font: { size: 11 }, color: '#94A3B8', callback: (v: any) => `${v} tce` } },
                   },
                 }}
               />
@@ -453,8 +453,8 @@ export default function EnergyQueryPage() {
                 <div className="text-xs text-slate-400 mt-0.5">当月各品种消费占比</div>
               </div>
             </div>
-            <div className="h-[340px] flex items-center justify-center">
-              <div className="w-[320px] h-[300px]">
+              <div className="h-[340px] flex items-center justify-center">
+              <div className="w-[320px] h-[300px] chart-entrance">
                 <Doughnut
                   data={structureChartData}
                   options={{

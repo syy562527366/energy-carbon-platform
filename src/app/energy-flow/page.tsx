@@ -496,7 +496,7 @@ export default function EnergyFlowPage() {
                   <div className="text-xs text-slate-400 mt-0.5">月度转换/输送/终端利用效率变化</div>
                 </div>
               </div>
-              <div className="h-[260px]">
+              <div className="h-[260px] chart-entrance">
                 <Line data={efficiencyChartData} options={{
                   responsive: true,
                   maintainAspectRatio: false,
@@ -521,7 +521,7 @@ export default function EnergyFlowPage() {
                   <div className="text-xs text-slate-400 mt-0.5">各品种占比</div>
                 </div>
               </div>
-              <div className="h-[260px] flex items-center justify-center">
+              <div className="h-[260px] flex items-center justify-center chart-entrance">
                 <Doughnut data={structureDonutData} options={{
                   responsive: true,
                   maintainAspectRatio: false,
@@ -545,7 +545,7 @@ export default function EnergyFlowPage() {
                 <div className="text-xs text-slate-400 mt-0.5">按能耗占比排列，标注效率与预警状态</div>
               </div>
             </div>
-            <div className="h-[220px]">
+            <div className="h-[220px] chart-entrance">
               <Bar data={nodeBarData} options={{
                 indexAxis: 'y',
                 responsive: true,

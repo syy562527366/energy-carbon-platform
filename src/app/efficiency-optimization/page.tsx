@@ -256,7 +256,7 @@ export default function EfficiencyOptimizationPage() {
     },
     scales: {
       x: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#334155' } },
-      y: { grid: { color: '#F1F5F9' }, ticks: { font: { size: 11 }, color: '#94A3B8' } },
+      y: { grid: { color: '#F1F5F9' }, ticks: { font: { size: 11 }, color: '#94A3B8', callback: (v: any) => `${v} tce` } },
     },
   };
 
@@ -337,7 +337,7 @@ export default function EfficiencyOptimizationPage() {
                   <div className="text-xs text-slate-400 mt-0.5">6大核心维度的当前值、目标值与行业基准对比</div>
                 </div>
               </div>
-              <div className="h-[280px]">
+              <div className={`h-[280px] ${balanceDimensions.length > 0 ? 'chart-entrance' : ''}`}>
                 {balanceDimensions.length > 0 ? (
                   <Radar data={radarData} options={radarOptions} />
                 ) : (
@@ -354,7 +354,7 @@ export default function EfficiencyOptimizationPage() {
                   <div className="text-xs text-slate-400 mt-0.5">实际节能量与计划对比</div>
                 </div>
               </div>
-              <div className="h-[280px]">
+              <div className={`h-[280px] ${monthlySavings.length > 0 ? 'chart-entrance' : ''}`}>
                 {monthlySavings.length > 0 ? (
                   <Bar data={savingsData} options={savingsBarOptions} />
                 ) : (
@@ -458,7 +458,7 @@ export default function EfficiencyOptimizationPage() {
                 </div>
               )}
             </div>
-            <div className="h-[280px]">
+            <div className={`h-[280px] ${comparisonData && comparisonData.optimizedItems.length > 0 ? 'chart-entrance' : ''}`}>
               {comparisonData && comparisonData.optimizedItems.length > 0 ? (
                 <Bar data={compareData} options={compareBarOptions} />
               ) : (

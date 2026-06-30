@@ -57,11 +57,9 @@ export default function Sidebar() {
     >
       {/* Logo */}
       <div className="flex items-center gap-3 px-5 py-[18px] border-b border-white/10 flex-shrink-0">
-        <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500 to-amber-400 flex items-center justify-center text-white font-bold text-sm flex-shrink-0">
-          碳
-        </div>
+        <img src="/carbon-logo.jpg" alt="碳启城" className="w-10 h-10 rounded-xl flex-shrink-0 bg-white p-0.5 object-contain" />
         <div>
-          <div className="text-sm font-semibold text-white tracking-wide">能碳管理平台</div>
+          <div className="text-sm font-semibold text-white tracking-wide">碳启城能碳管理平台</div>
           <div className="text-[10px] text-white/40 font-medium">Carbon & Energy Manager</div>
         </div>
       </div>

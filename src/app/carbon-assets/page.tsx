@@ -24,8 +24,8 @@ export default function CarbonAssetsPage() {
   const donutOpts = { responsive:true, maintainAspectRatio:false, cutout:'60%' as const, plugins:{legend:{position:'bottom' as const,labels:{usePointStyle:true,padding:12,font:{size:11}}}}};
   const lineOpts = { responsive:true, maintainAspectRatio:false, interaction:{intersect:false,mode:'index' as const},
     plugins:{legend:{position:'bottom' as const,labels:{usePointStyle:true,padding:12,font:{size:11}}}},
-    scales:{y:{type:'linear' as const,position:'left' as const,grid:{color:'#F1F5F9'},ticks:{font:{size:11},color:'#94A3B8'}},
-            y1:{type:'linear' as const,position:'right' as const,grid:{display:false},ticks:{font:{size:11},color:'#94A3B8'},min:0}}};
+    scales:{y:{type:'linear' as const,position:'left' as const,grid:{color:'#F1F5F9'},ticks:{font:{size:11},color:'#94A3B8',callback:(v:any)=>`${v} 元/tCO₂`}},
+            y1:{type:'linear' as const,position:'right' as const,grid:{display:false},ticks:{font:{size:11},color:'#94A3B8',min:0,callback:(v:any)=>`${v} 手`}}}};
 
   return (<div className="min-h-screen bg-slate-50"><Sidebar /><div className="ml-[260px]">
     <header className="sticky top-0 z-40 bg-white border-b border-slate-200 px-8 py-3 flex items-center justify-between">
@@ -62,11 +62,11 @@ export default function CarbonAssetsPage() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-4">
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">碳资产构成</div>
-          <div className="h-[240px] flex items-center justify-center">{s ? <Doughnut data={ad} options={donutOpts} /> : <span className="text-slate-400">...</span>}</div>
+          <div className={`h-[240px] flex items-center justify-center ${s ? 'chart-entrance' : ''}`}>{s ? <Doughnut data={ad} options={donutOpts} /> : <span className="text-slate-400">...</span>}</div>
         </div>
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">碳价走势与成交量</div>
-          <div className="h-[240px]">{data?.monthlyPrice?.length ? <Line data={pd} options={lineOpts} /> : <div className="text-center text-slate-400 pt-16">加载中...</div>}</div>
+          <div className={`h-[240px] ${data?.monthlyPrice?.length ? 'chart-entrance' : ''}`}>{data?.monthlyPrice?.length ? <Line data={pd} options={lineOpts} /> : <div className="text-center text-slate-400 pt-16">加载中...</div>}</div>
         </div>
       </div>
     </div>

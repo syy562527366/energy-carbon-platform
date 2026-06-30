@@ -17,7 +17,7 @@ export default function CarbonAccountingPage() {
   const lineData = { labels:data?.monthlyEmission?.map((m:any)=>m.month)||[], datasets:[{label:'总排放(tCO₂)',data:data?.monthlyEmission?.map((m:any)=>m.total)||[], borderColor:'#F97316', backgroundColor:'rgba(249,115,22,0.1)', fill:true, tension:0.4, pointRadius:5, pointBackgroundColor:'#F97316', pointBorderColor:'#fff', pointBorderWidth:2, borderWidth:2.5}]};
 
   const barOpts = { responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom' as const,labels:{usePointStyle:true,padding:10,font:{size:10}}}}, scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'#F1F5F9'},ticks:{font:{size:11}}}}};
-  const lineOpts = { responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom' as const,labels:{usePointStyle:true,padding:10,font:{size:10}}}}, scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'#F1F5F9'},ticks:{font:{size:11}}}}};
+  const lineOpts = { responsive:true, maintainAspectRatio:false, plugins:{legend:{position:'bottom' as const,labels:{usePointStyle:true,padding:10,font:{size:10}}}}, scales:{x:{grid:{display:false},ticks:{font:{size:11}}},y:{grid:{color:'#F1F5F9'},ticks:{font:{size:11},callback:(v:any)=>`${v} tCO₂`}}}};
   const donutOpts = { responsive:true, maintainAspectRatio:false, cutout:'60%' as const, plugins:{legend:{position:'bottom' as const,labels:{usePointStyle:true,padding:12,font:{size:11}}}}};
 
   return (<div className="min-h-screen bg-slate-50"><Sidebar /><div className="ml-[260px]">
@@ -28,6 +28,12 @@ export default function CarbonAccountingPage() {
     <div className="px-8 pt-6 pb-4">
       <div className="flex items-start justify-between">
         <div><h1 className="text-[22px] font-bold text-slate-800 tracking-tight">碳排放核算</h1><p className="text-[13px] text-slate-500 mt-1">按照GB/T 32151标准核算企业碳排放总量和强度</p></div>
+        <a href="https://tqcdemo.tanx.cc/plan/version" target="_blank" rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-orange-600 bg-orange-50 hover:bg-orange-100 border border-orange-200 transition-colors shadow-sm"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          组织碳核算系统
+        </a>
       </div>
     </div>
 
@@ -51,11 +57,11 @@ export default function CarbonAccountingPage() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-4">
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">排放结构</div>
-          <div className="h-[260px] flex items-center justify-center">{s ? <Doughnut data={scopeData} options={donutOpts} /> : <span className="text-slate-400">...</span>}</div>
+          <div className={`h-[260px] flex items-center justify-center ${s ? 'chart-entrance' : ''}`}>{s ? <Doughnut data={scopeData} options={donutOpts} /> : <span className="text-slate-400">...</span>}</div>
         </div>
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">月度排放趋势</div>
-          <div className="h-[260px]">{data?.monthlyEmission?.length ? <Line data={lineData} options={lineOpts} /> : <div className="text-center text-slate-400 pt-20">加载中...</div>}</div>
+          <div className={`h-[260px] ${data?.monthlyEmission?.length ? 'chart-entrance' : ''}`}>{data?.monthlyEmission?.length ? <Line data={lineData} options={lineOpts} /> : <div className="text-center text-slate-400 pt-20">加载中...</div>}</div>
         </div>
       </div>
     </div>

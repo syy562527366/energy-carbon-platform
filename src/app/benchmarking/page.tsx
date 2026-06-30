@@ -220,7 +220,7 @@ export default function BenchmarkingPage() {
                   <div className="text-xs text-slate-400 mt-0.5">月度综合达标率变化</div>
                 </div>
               </div>
-              <div className="h-[260px]">
+              <div className="h-[260px] chart-entrance">
                 <Line data={complianceChartData} options={{
                   responsive: true, maintainAspectRatio: false,
                   plugins: {
@@ -276,7 +276,7 @@ export default function BenchmarkingPage() {
               </div>
             </div>
             <div className="flex items-center justify-center gap-10">
-              <div className="w-[220px] h-[220px]">
+              <div className="w-[220px] h-[220px] chart-entrance">
                 <Doughnut data={donutData} options={{
                   responsive: true, maintainAspectRatio: false, cutout: '58%',
                   plugins: {

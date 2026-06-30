@@ -20,7 +20,7 @@ export default function CarbonFootprintPage() {
   const ml = { labels:data?.monthlyFootprint?.map((m:any)=>m.month)||[], datasets:products.map((p,i)=>({label:p, data:data?.monthlyFootprint?.map((m:any)=>m[p])||[], borderColor:colors[i], backgroundColor:colors[i]+'15', fill:false, tension:0.3, pointRadius:4, borderWidth:2}))};
 
   const donutOpts = { responsive:true, maintainAspectRatio:false, cutout:'55%' as const, plugins:{legend:{position:'bottom' as const,labels:{usePointStyle:true,padding:12,font:{size:10}}}}};
-  const lineOpts = { responsive:true, maintainAspectRatio:false, interaction:{intersect:false,mode:'index' as const}, plugins:{legend:{position:'bottom' as const,labels:{usePointStyle:true,padding:12,font:{size:11}}}}};
+  const lineOpts = { responsive:true, maintainAspectRatio:false, interaction:{intersect:false,mode:'index' as const}, plugins:{legend:{position:'bottom' as const,labels:{usePointStyle:true,padding:12,font:{size:11}}}}, scales:{x:{grid:{display:false},ticks:{font:{size:11},color:'#94A3B8'}},y:{grid:{color:'#F1F5F9'},ticks:{font:{size:11},color:'#94A3B8',callback:(v:any)=>`${v} kgCO₂e`}}}};
 
   return (<div className="min-h-screen bg-slate-50"><Sidebar /><div className="ml-[260px]">
     <header className="sticky top-0 z-40 bg-white border-b border-slate-200 px-8 py-3 flex items-center justify-between">
@@ -84,7 +84,7 @@ export default function CarbonFootprintPage() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-4">
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">碳足迹分布</div>
-          <div className="h-[280px] flex items-center justify-center">
+          <div className={`h-[280px] flex items-center justify-center ${data?.footprintBreakdown?.length ? 'chart-entrance' : ''}`}>
             {data?.footprintBreakdown?.length ? <Doughnut data={fd} options={donutOpts} /> : <span className="text-slate-400">...</span>}
           </div>
           <div className="mt-3 space-y-2">
@@ -98,7 +98,7 @@ export default function CarbonFootprintPage() {
         </div>
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">月度碳足迹趋势</div>
-          <div className="h-[280px]">{data?.monthlyFootprint?.length ? <Line data={ml} options={lineOpts} /> : <div className="text-center text-slate-400 pt-20">加载中...</div>}</div>
+          <div className={`h-[280px] ${data?.monthlyFootprint?.length ? 'chart-entrance' : ''}`}>{data?.monthlyFootprint?.length ? <Line data={ml} options={lineOpts} /> : <div className="text-center text-slate-400 pt-20">加载中...</div>}</div>
         </div>
       </div>
     </div>

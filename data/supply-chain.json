@@ -32,11 +32,11 @@
     { "name": "其他", "value": 3400, "ratio": 7.5, "color": "#94A3B8" }
   ],
   "monthlyCollectionRate": [
-    { "month": "1月", rate: 65 },
-    { "month": "2月", rate: 70 },
-    { "month": "3月", rate: 68 },
-    { "month": "4月", rate: 72 },
-    { "month": "5月", rate: 75 },
-    { "month": "6月", rate: 79 }
+    { "month": "1月", "rate": 65 },
+    { "month": "2月", "rate": 70 },
+    { "month": "3月", "rate": 68 },
+    { "month": "4月", "rate": 72 },
+    { "month": "5月", "rate": 75 },
+    { "month": "6月", "rate": 79 }
   ]
 }

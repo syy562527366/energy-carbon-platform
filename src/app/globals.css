@@ -70,3 +70,17 @@ body {
   to { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-in { animation: fadeIn 0.3s ease forwards; }
+
+/* Chart entrance animation */
+@keyframes chartFadeIn {
+  from { opacity: 0; transform: translateY(12px) scale(0.97); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+.chart-entrance {
+  animation: chartFadeIn 0.5s ease-out forwards;
+}
+.chart-entrance:nth-child(2) { animation-delay: 0.1s; }
+.chart-entrance:nth-child(3) { animation-delay: 0.2s; }
+.chart-entrance:nth-child(4) { animation-delay: 0.3s; }
+.chart-entrance:nth-child(5) { animation-delay: 0.4s; }
+.chart-entrance:nth-child(6) { animation-delay: 0.5s; }
