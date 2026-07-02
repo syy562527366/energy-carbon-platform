@@ -205,8 +205,8 @@ export default function EnergyAnalysisPage() {
                   ))}
                 </div>
               </div>
-              <div className="h-[280px] flex items-center justify-center chart-entrance">
-                <div className="w-full h-[260px] px-2 chart-entrance">
+              <div className="h-[280px] flex items-center justify-center">
+                <div className="w-full h-[260px] px-2">
                   <Bar data={{
                     labels: currentStructure.labels,
                     datasets: [{
@@ -238,7 +238,7 @@ export default function EnergyAnalysisPage() {
                   <div className="text-xs text-slate-400 mt-0.5">分品种月度成本走势（万元）</div>
                 </div>
               </div>
-              <div className="h-[280px] chart-entrance">
+              <div className="h-[280px]">
                 <Bar data={costChartData}                   options={{
                     responsive: true, maintainAspectRatio: false,
                     plugins: { legend: { position: 'bottom', labels: { usePointStyle: true, padding: 12, font: { size: 11 } } },

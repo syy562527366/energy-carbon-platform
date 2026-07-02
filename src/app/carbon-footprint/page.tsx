@@ -28,7 +28,15 @@ export default function CarbonFootprintPage() {
       <div className="w-9 h-9 rounded-lg bg-gradient-to-br from-slate-500 to-slate-600 flex items-center justify-center text-white font-semibold text-sm cursor-pointer">王</div>
     </header>
     <div className="px-8 pt-6 pb-4">
-      <div><h1 className="text-[22px] font-bold text-slate-800 tracking-tight">产品碳足迹核算</h1><p className="text-[13px] text-slate-500 mt-1">按照LCA方法量化产品全生命周期碳排放</p></div>
+      <div className="flex items-start justify-between">
+        <div><h1 className="text-[22px] font-bold text-slate-800 tracking-tight">产品碳足迹核算</h1><p className="text-[13px] text-slate-500 mt-1">按照LCA方法量化产品全生命周期碳排放</p></div>
+        <a href="https://productcarbon.tanqicheng.com" target="_blank" rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium text-green-600 bg-green-50 hover:bg-green-100 border border-green-200 transition-colors shadow-sm"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          产品碳核算系统
+        </a>
+      </div>
     </div>
 
     {/* KPI */}
@@ -84,8 +92,8 @@ export default function CarbonFootprintPage() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-4">
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">碳足迹分布</div>
-          <div className={`h-[280px] flex items-center justify-center ${data?.footprintBreakdown?.length ? 'chart-entrance' : ''}`}>
-            {data?.footprintBreakdown?.length ? <Doughnut data={fd} options={donutOpts} /> : <span className="text-slate-400">...</span>}
+          <div className="h-[280px] flex items-center justify-center">
+            <Doughnut data={fd} options={donutOpts} />
           </div>
           <div className="mt-3 space-y-2">
             {data?.footprintBreakdown?.map((item:any,i:number)=>(
@@ -98,7 +106,7 @@ export default function CarbonFootprintPage() {
         </div>
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">月度碳足迹趋势</div>
-          <div className={`h-[280px] ${data?.monthlyFootprint?.length ? 'chart-entrance' : ''}`}>{data?.monthlyFootprint?.length ? <Line data={ml} options={lineOpts} /> : <div className="text-center text-slate-400 pt-20">加载中...</div>}</div>
+          <div className="h-[280px]"><Line data={ml} options={lineOpts} /></div>
         </div>
       </div>
     </div>

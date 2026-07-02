@@ -57,11 +57,11 @@ export default function CarbonAccountingPage() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_1.5fr] gap-4">
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">排放结构</div>
-          <div className={`h-[260px] flex items-center justify-center ${s ? 'chart-entrance' : ''}`}>{s ? <Doughnut data={scopeData} options={donutOpts} /> : <span className="text-slate-400">...</span>}</div>
+          <div className="h-[260px] flex items-center justify-center"><Doughnut data={scopeData} options={donutOpts} /></div>
         </div>
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">月度排放趋势</div>
-          <div className={`h-[260px] ${data?.monthlyEmission?.length ? 'chart-entrance' : ''}`}>{data?.monthlyEmission?.length ? <Line data={lineData} options={lineOpts} /> : <div className="text-center text-slate-400 pt-20">加载中...</div>}</div>
+          <div className="h-[260px]"><Line data={lineData} options={lineOpts} /></div>
         </div>
       </div>
     </div>

@@ -385,7 +385,7 @@ export default function BudgetManagementPage() {
                 </div>
               </div>
               <div className="flex items-center gap-6">
-                <div className={`w-[140px] h-[140px] flex-shrink-0 ${summary ? 'chart-entrance' : ''}`}>
+                <div key={summary ? 'energy-donut' : 'empty'} className="w-[140px] h-[140px] flex-shrink-0">
                   {summary ? <Doughnut data={energyDonutData} options={donutOptions} /> : <div className="w-full h-full flex items-center justify-center text-slate-400 text-sm">...</div>}
                 </div>
                 <div className="flex-1">
@@ -429,7 +429,7 @@ export default function BudgetManagementPage() {
                 </div>
               </div>
               <div className="flex items-center gap-6">
-                <div className={`w-[140px] h-[140px] flex-shrink-0 ${summary ? 'chart-entrance' : ''}`}>
+                <div key={summary ? 'carbon-donut' : 'empty'} className="w-[140px] h-[140px] flex-shrink-0">
                   {summary ? <Doughnut data={carbonDonutData} options={donutOptions} /> : <div className="w-full h-full flex items-center justify-center text-slate-400 text-sm">...</div>}
                 </div>
                 <div className="flex-1">
@@ -477,7 +477,7 @@ export default function BudgetManagementPage() {
                   <div className="text-xs text-slate-400 mt-0.5">月度预算与实际用量对比</div>
                 </div>
               </div>
-              <div className={`h-[260px] ${monthlyExecution.filter(m => m.energyActual > 0).length > 0 ? 'chart-entrance' : ''}`}>
+              <div key={monthlyExecution.filter(m => m.energyActual > 0).length > 0 ? 'line1' : 'empty'} className="h-[260px]">
                 {monthlyExecution.filter(m => m.energyActual > 0).length > 0 ? (
                   <Line data={energyLineData} options={energyLineOptions} />
                 ) : (
@@ -494,7 +494,7 @@ export default function BudgetManagementPage() {
                   <div className="text-xs text-slate-400 mt-0.5">各能源品种预算 vs 已用量</div>
                 </div>
               </div>
-              <div className={`h-[260px] ${categoryBreakdown.length > 0 ? 'chart-entrance' : ''}`}>
+              <div key={categoryBreakdown.length > 0 ? 'bar' : 'empty'} className="h-[260px]">
                 {categoryBreakdown.length > 0 ? (
                   <Bar data={categoryBarData} options={categoryBarOptions} />
                 ) : (
@@ -567,7 +567,7 @@ export default function BudgetManagementPage() {
                 <span className="px-2 py-1 bg-red-50 text-red-600 rounded-md font-medium">预算上限</span>
               </div>
             </div>
-            <div className={`h-[260px] ${forecast.length > 0 ? 'chart-entrance' : ''}`}>
+            <div key={forecast.length > 0 ? 'forecast' : 'empty'} className="h-[260px]">
               {forecast.length > 0 ? (
                 <Line data={forecastData} options={forecastChartOptions} />
               ) : (

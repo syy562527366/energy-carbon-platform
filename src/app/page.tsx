@@ -425,7 +425,7 @@ export default function EnergyQueryPage() {
                 ))}
               </div>
             </div>
-            <div className="h-[260px] chart-entrance">
+            <div className="h-[260px]">
               <Line
                 data={trendChartData[timelineView]}
                 options={{
@@ -454,7 +454,7 @@ export default function EnergyQueryPage() {
               </div>
             </div>
               <div className="h-[340px] flex items-center justify-center">
-              <div className="w-[320px] h-[300px] chart-entrance">
+              <div className="w-[320px] h-[300px]">
                 <Doughnut
                   data={structureChartData}
                   options={{

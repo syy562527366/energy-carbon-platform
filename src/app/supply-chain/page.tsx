@@ -51,7 +51,7 @@ export default function SupplyChainPage() {
       <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-4">
         <div className="bg-white rounded-xl border border-slate-200 shadow-sm p-5">
           <div className="text-sm font-semibold text-slate-800 mb-4">供应链排放分布</div>
-          <div className={`h-[240px] flex items-center justify-center ${data?.emissionByCategory?.length ? 'chart-entrance' : ''}`}>{data?.emissionByCategory?.length ? <Doughnut data={cd} options={donutOpts} /> : <span className="text-slate-400">...</span>}</div>
+          <div className="h-[240px] flex items-center justify-center"><Doughnut data={cd} options={donutOpts} /></div>
           <div className="text-xs text-slate-400 text-center mt-3">总排放: {(s?.totalSupplyChainEmission||0).toLocaleString()} tCO₂</div>
         </div>
 
